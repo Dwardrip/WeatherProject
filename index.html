@@ -71,25 +71,29 @@
           <h5 class="city" id="city"></h5>
           <h6 id="description"></h6>
           
-          <div class="row extraInfo">
+          <div class="row" id="overview">
+          <h4 class="city" id="city"></h4>
+          <h6 class="description" id="description"></h6>
+        </div>
+
+        <div class="row extraInfo">
           <div class="col-6">
-            <div class="clearfix weather-temperature">
+            <div class="d-flex weather-temperature">
               <div class="current-temperature">
-                <img src="" alt="Clear" id="icon" class="float-right" />
+                <img src="" alt="Clear" id="weather-icon" class="icon" />
                 <span class="temperature" id="temperature"></span>
                 <span class="units">ºC</span>
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="col forecast">
-              <ul>
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-              </ul>
-            </div>
+          <div class="col-6 weather-detail">
+            <ul>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
           </div>
         </div>
+
 
           <div class="row align-items-center weekday">
             <div class="col day">
