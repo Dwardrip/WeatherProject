@@ -70,17 +70,26 @@
           <h4 class="searchCity" id="currentCity"></h4>
           <h5 class="city" id="city"></h5>
           <h6 id="description"></h6>
-          <div class="current-temperature">
-            <span class="temperature" id="temperature"></span>
-            <span>ºC</span>
+          
+          <div class="row extraInfo">
+          <div class="col-6">
+            <div class="clearfix weather-temperature">
+              <div class="current-temperature">
+                <img src="" alt="Clear" id="icon" class="float-right" />
+                <span class="temperature" id="temperature"></span>
+                <span class="units">ºC</span>
+              </div>
+            </div>
           </div>
-          <div class="col forecast">
-            <ul>
-              <li>Humidity: <span id="humidity"></span> %</li>
-
-              <li>Wind: <span id="wind"></span> km/h</li>
-            </ul>
+          <div class="col-6">
+            <div class="col forecast">
+              <ul>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
           </div>
+        </div>
 
           <div class="row align-items-center weekday">
             <div class="col day">
