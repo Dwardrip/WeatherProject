@@ -59,6 +59,11 @@ p {
 
 .weather-temperature {
   float: right;
+  padding-bottom: 30px;
+}
+
+.icon {
+  margin: 0px 10px 20px;
 }
 
 .current-temperature .units {
