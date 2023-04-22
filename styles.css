@@ -6,6 +6,7 @@ body {
 
 h1 {
   text-align: center;
+  color: blue;
 }
 
 h2,
@@ -21,12 +22,8 @@ h3 {
 }
 
 h4 {
-  font-size: 35px;
+  font-size: 40px;
   font: bold;
-}
-
-h5 {
-  font-size: 20px;
 }
 
 li {
@@ -34,9 +31,8 @@ li {
 }
 
 p {
-   text-align: center;
-}
-
+  text-align: center;
+} 
 
 .container {
   padding: 30px 30px;
@@ -46,6 +42,7 @@ p {
   border: dotted;
   border-width: 10px 4px;
   border-radius: 10px 40px;
+  padding: 50px 20px;
 }
 
 .location {
@@ -53,7 +50,6 @@ p {
   margin: 0 auto;
   padding: 20px 20px;
 }
-
 
 .temperature {
   font-size: 50px;
@@ -80,8 +76,8 @@ p {
   text-transform: capitalize;
 }
 
-.forecast {
-  font-size: 10px;
+.weather-detail {
+  font-size: 15px;
   padding: 10px 10px;
   float: left;
 }
@@ -94,4 +90,12 @@ p {
 
 #overview {
   text-align: center;
+}
+
+#lookUp {
+  background-color: blueviolet;
+}
+
+#current-location-button {
+  background-color: orange;
 }
