@@ -65,15 +65,17 @@ function handelSubmit(event) {
   searchCity(city);
 }
 
-function getCurrentLocation(position) {
-  let apiKey = "bb7d3a16c0a16792a34131254852ed9f";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=]{lat}lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeather);
-}
-
-function searchLocation(event) {
+function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+function searchLocation(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "bb7d3a16c0a16792a34131254852ed9f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
 }
 
 let searchFrom = document.querySelector("#search-form");
