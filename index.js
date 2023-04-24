@@ -41,10 +41,12 @@ h3.innerHTML = `${hours}:${minutes}`;
 //
 
 function displayWeather(response) {
+ 
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -81,10 +83,33 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let displayWeather = document.querySelector("#temperature");
+  displayWeather.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+
+  let displayWeather = document.querySelector("#temperature");
+  displayWeather.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let searchFrom = document.querySelector("#search-form");
 searchFrom.addEventListener("submit", handelSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Gingelom");
