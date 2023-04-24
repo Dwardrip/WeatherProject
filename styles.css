@@ -62,15 +62,30 @@ p {
   padding-bottom: 30px;
 }
 
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
 .icon {
   margin: 0px 10px 20px;
 }
 
-.current-temperature .units {
+.weather-temperature .units {
   position: relative;
   font-size: 16px;
   font-weight: bold;
-  top: -20px;
+  top: -1px;
+}
+
+
+.icon {
+  margin: 0px 10px 20px;
 }
 
 .description {
