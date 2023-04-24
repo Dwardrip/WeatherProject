@@ -40,9 +40,12 @@ p {
 
 .card {
   border: dotted;
+  background-color: rgb(192, 230, 230);
   border-width: 10px 4px;
-  border-radius: 10px 40px;
+  border-radius: 20px 40px;
   padding: 50px 20px;
+  border-color: rgb(112, 11, 104);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
 }
 
 .location {
@@ -112,10 +115,12 @@ p {
   text-align: center;
 }
 
+
 #lookUp {
-  background-color: blueviolet;
+  background-color: rgb(221, 45, 206);
 }
 
 #current-location-button {
-  background-color: orange;
+  background-color: rgb(70, 180, 19);
 }
+
