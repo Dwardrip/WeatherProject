@@ -6,7 +6,8 @@ body {
 
 h1 {
   text-align: center;
-  color: rgb(61, 44, 134);
+  color: rgb(112, 11, 104);
+  font-weight: bold;
 }
 
 h2,
@@ -22,8 +23,8 @@ h3 {
 }
 
 h4 {
-  font-size: 40px;
-  font: bold;
+  font-size: 60px;
+  font-weight: bold;
 }
 
 li {
@@ -36,12 +37,12 @@ li {
 
 .card {
   border: dotted;
-  background-color: rgb(192, 230, 230);
+  background-color: rgb(192, 230, 230, 0.3);
   border-width: 10px 4px;
   border-radius: 20px 40px;
   padding: 50px 20px;
   border-color: rgb(112, 11, 104);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 15px 15px 20px rgba(178, 176, 184, 0.6);
 }
 
 .location {
@@ -99,20 +100,31 @@ li {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: #000;
+  color: #2c0202;
 }
 
 .weather-forecast-date {
   font-size: 25px;
-  opacity: 0.8;
-  color: #000;
-  font-style: bold;
+  opacity: 2;
+  color: #300331;
+  font-weight: bold;
 }
+
 .weather-forecast-temp-max {
-  opacity: 0.8;
+  opacity: 0.9;
 }
+
 .weather-forecast-temp-min {
   opacity: 0.5;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
 }
 
 #overview {
@@ -120,9 +132,9 @@ li {
 }
 
 #lookUp {
-  background-color: rgb(221, 45, 206);
+  background-color: rgb(33, 228, 241);
 }
 
 #current-location-button {
-  background-color: rgb(70, 180, 19);
+  background-color: rgb(213, 181, 214);
 }
