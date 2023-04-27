@@ -26,7 +26,7 @@
       integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
       crossorigin="anonymous"
     ></script>
-       <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles.css" />
 
     <title>Weather App</title>
   </head>
@@ -35,7 +35,7 @@
       <div class="card">
         <h1>Weather Guide</h1>
         <h2></h2>
-        <h3></h3>
+        <h3><span>GMT+2</span></h3>
 
         <form id="search-form">
           <div class="container text-center">
@@ -46,15 +46,14 @@
                   type="search"
                   id="input-city"
                   placeholder="Enter your location"
-                  aria-label="Enter your location"
+                  autocomplete="off"
                   autofocus="on"
                 />
               </div>
-                <div class="col-3 buttons">
+              <div class="col-3 buttons">
                 <button type="submit" class="btn btn-info" id="lookUp">
                   🔍Search
                 </button>
-
                 <button
                   type="button"
                   id="current-location-button"
@@ -66,22 +65,21 @@
             </div>
           </div>
         </form>
-         <div class="row" id="overview">
+
+        <div class="row" id="overview">
           <h4 class="city" id="city"></h4>
           <h6 class="description" id="description"></h6>
         </div>
-          
-    
+
         <div class="row wrapper">
           <div class="col-6">
             <div class="d-flex weather-temperature">
-                 <img src="" alt="Clear" id="weather-icon" class="icon" />
-                <span class="temperature" id="temperature"></span>
-                 <span class="units"
+              <img src="" alt="Clear" id="weather-icon" class="icon" />
+              <span class="temperature" id="temperature"></span>
+              <span class="units"
                 ><a href="#" id="celsius-link" class="active">ºC </a> |
                 <a href="#" id="fahrenheit-link">°F</a></span
               >
-              
             </div>
           </div>
           <div class="col-6 weather-detail">
@@ -91,9 +89,7 @@
             </ul>
           </div>
         </div>
-
-
-          <div class="weather-forecast">
+        <div class="weather-forecast">
           <div class="row">
             <div class="col 2">
               <div class="weather-forecast-date" id="forecast">Sunday</div>
@@ -108,8 +104,6 @@
         </div>
       </div>
     </div>
-   <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
-  <p><a href="https://github.com/Dwardrip/WeatherProject" target="_blank">Open Source Code</a> Created by Danielle Wardrip</p>
-  
 </html>
