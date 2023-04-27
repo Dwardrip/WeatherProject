@@ -103,11 +103,13 @@ li {
 }
 
 .weather-forecast-date {
-  font-size: 20px;
-  opacity: 0.5;
+  font-size: 25px;
+  opacity: 0.8;
+  color: #000;
+  font-style: bold;
 }
 .weather-forecast-temp-max {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .weather-forecast-temp-min {
   opacity: 0.5;
