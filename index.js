@@ -40,6 +40,11 @@ h3.innerHTML = `${hours}:${minutes}`;
 
 //
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML =
@@ -62,11 +67,9 @@ h3.innerHTML = `${hours}:${minutes}`;
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
- 
 }
 
 function displayWeather(response) {
- 
   celsiusTemperature = response.data.main.temp;
 
   document.querySelector("#city").innerHTML = response.data.name;
@@ -78,8 +81,12 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  
-  document.querySelector("#weather-icon").setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+
+  document
+    .querySelector("#weather-icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
     );
 }
 
@@ -110,7 +117,8 @@ function searchLocation(position) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-    celsiusLink.classList.remove("active");
+
+  celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let displayWeather = document.querySelector("#temperature");
@@ -119,8 +127,10 @@ function displayFahrenheitTemperature(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
+
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
+
   let displayWeather = document.querySelector("#temperature");
   displayWeather.innerHTML = Math.round(celsiusTemperature);
 }
@@ -140,3 +150,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Gingelom");
+
+displayForecast();
