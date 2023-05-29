@@ -31,7 +31,7 @@
     <title>Weather App</title>
   </head>
   <body>
-        <video autoplay muted loop id="myVideo">
+    <video autoplay muted loop id="myVideo">
       <source src="valley.mp4" type="video/mp4" />
     </video>
     <div class="container">
@@ -77,7 +77,7 @@
         <div class="row wrapper">
           <div class="col-6">
             <div class="d-flex weather-temperature">
-              <img src="" alt="Clear" id="weather-icon" class="icon" />
+              <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png", alt="Clear" id="weather-icon" class="icon" />
               <span class="temperature" id="temperature"></span>
               <span class="units"
                 ><a href="#" id="celsius-link" class="active">ºC </a> |
@@ -87,21 +87,48 @@
           </div>
           <div class="col-6 weather-detail">
             <ul>
-              <li>Humidity: <span id="humidity"></span> %</li>
-              <li>Wind: <span id="wind"></span> km/h</li>
+              <li>Humidity: <span id="humidity"></span></li>
+              <li>Wind: <span id="wind"></span></li>
             </ul>
           </div>
         </div>
-
-        <div class="weather-forecast">
+        <div class="weather-forecast" id="forecast">
           <div class="row">
             <div class="col 2">
-              <div class="weather-forecast-date" id="forecast">Sunday</div>
-              <img src="" alt="" width="42" />
+              <div class="weather-forecast-date">Sunday</div>
+              <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="description" width="50px" />
               <div class="weather-forecast-temp">
                 <span class="weather-forecast-temp-max"></span>
                 <span class="weather-forecast-temp-min"></span>
-                 </div>
+              </div>
+              <div class="col 2">
+                <div class="weather-forecast-date">Monday</div>
+                <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="description" width="50px" />
+                <div class="weather-forecast-temp">
+                  <span class="weather-forecast-temp-max"></span>
+                  <span class="weather-forecast-temp-min"></span>
+                </div>
+                <div class="col 2">
+                  <div class="weather-forecast-date">Tuesday</div>
+                  <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="description" width="50px" />
+                  <div class="weather-forecast-temp">
+                    <span class="weather-forecast-temp-max"></span>
+                    <span class="weather-forecast-temp-min"></span>
+                  </div>
+                  <div class="col 2">
+                    <div class="weather-forecast-date">Wednesday</div>
+                    <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="description" width="50px" />
+                    <div class="weather-forecast-temp">
+                      <span class="weather-forecast-temp-max"></span>
+                      <span class="weather-forecast-temp-min"></span>
+                    </div>
+                    <div class="col 2">
+                      <div class="weather-forecast-date">Thursday</div>
+                      <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="description" width="50px" />
+                      <div class="weather-forecast-temp">
+                        <span class="weather-forecast-temp-max"></span>
+                        <span class="weather-forecast-temp-min"></span>
+                      </div>
             </div>
           </div>
         </div>
