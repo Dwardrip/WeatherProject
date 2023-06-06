@@ -96,7 +96,7 @@ function displayForecast(response) {
 
 function displayWeather(response) {
  
-  celsiusTemperature = response.data.temperature;
+  celsiusTemperature = response.data.temperature.current;
   
   document.querySelector("#temperature").innerHTML =
     Math.round(celsiusTemperature);
@@ -156,7 +156,7 @@ function displayCelsiusTemperature(event) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 
-  let displayWeather = document.querySelector("#temperature");
+  let displayWeather = document.querySelector("#temperature.current");
   displayWeather.innerHTML = Math.round(celsiusTemperature);
 }
 
