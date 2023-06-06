@@ -96,7 +96,7 @@ function displayForecast(response) {
 
 function displayWeather(response) {
  
-  celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.temperature;
   
   document.querySelector("#temperature").innerHTML =
     Math.round(celsiusTemperature);
