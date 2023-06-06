@@ -130,14 +130,13 @@ function handelSubmit(event) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
-  axios.get(apiUrl).then(showTemperature);
-}
+  }
 
 function searchLocation(position) {
-  let lat = coordinates.latitude;
-  let lon = coordinates.longitude;
-  let apiKey = "3at253b114d8ffb09faf86d264boff05";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "bb7d3a16c0a16792a34131254852ed9f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
